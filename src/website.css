@@ -58,4 +58,11 @@ button {
   padding: 0;
   color: aliceblue;
   font-size: 1.5em;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s;
+}
+
+button:hover {
+  transform: translateY(-15%);
 }
