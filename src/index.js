@@ -1,1 +1,3 @@
-console.log("iam working!");
+import { pageLoad } from "./website";
+
+pageLoad();
