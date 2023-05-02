@@ -2,6 +2,7 @@
   --font-color-dark: #aaa;
   --background-dark: rgba(0, 0, 0, 0.9);
   --background-light-hover: rgba(99, 99, 99, 0.4);
+  --background-light: rgba(0, 0, 0, 0.6);
 }
 
 *,
@@ -69,7 +70,11 @@ button:hover {
 }
 
 #main {
-  width: 5em;
-  height: 5em;
-  background-color: var(--background-light-hover);
+  width: 700px;
+  height: 500px;
+  background-color: var(--background-light);
+  position: relative;
+  left: 20em;
+  top: 4em;
+  border: 1px solid var(--background-light-hover);
 }
