@@ -1,3 +1,3 @@
-import { pageLoad } from "./website";
+import { loadWebsite } from "./website";
 
-pageLoad();
+loadWebsite();

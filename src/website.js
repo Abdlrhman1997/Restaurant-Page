@@ -6,7 +6,17 @@ function createHeader() {
   h1.textContent = "Rahim Pizza";
 
   header.appendChild(h1);
-  header.appendChild(createNav);
+  header.appendChild(createNav());
+
+  return header;
+}
+
+function setActiveButton(e) {
+  const navButtons = document.querySelectorAll(".button-nav");
+  navButtons.forEach((e) => {
+    e.classList.remove(".active");
+    e.classList.add(".active");
+  });
 }
 
 function checkActiveButton(e) {
@@ -25,22 +35,49 @@ function checkActiveButton(e) {
 }
 
 function createNav() {
+  const nav = document.createElement("nav");
+
   const homeBttn = document.createElement("button");
   homeBttn.classList.add("button-nav");
   homeBttn.textContent = "Home";
-  homeBttn.addEventListener("click", checkActiveButton(e.target));
+  homeBttn.addEventListener("click", (e) => {
+    checkActiveButton(e.target);
+  });
 
   const menuBttn = document.createElement("button");
   menuBttn.classList.add("button-nav");
   menuBttn.textContent = "Menu";
-  menuBttn.addEventListener("click", checkActiveButton(e.target));
+  menuBttn.addEventListener("click", (e) => {
+    checkActiveButton(e.target);
+  });
 
   const contactBttn = document.createElement("button");
   contactBttn.classList.add("button-nav");
   contactBttn.textContent = "Contact";
-  contactBttn.addEventListener("click", checkActiveButton(e.target));
+  contactBttn.addEventListener("click", (e) => {
+    checkActiveButton(e.target);
+  });
+
+  nav.appendChild(homeBttn);
+  nav.appendChild(menuBttn);
+  nav.appendChild(contactBttn);
+
+  return nav;
 }
 
-function pageLoad() {}
+function createMain() {
+  const main = document.createElement("main");
+  main.classList.add("main");
+  main.setAttribute("id", "main");
+  return main;
+}
 
-export { pageLoad };
+function loadWebsite() {
+  const divContent = document.getElementById("content");
+  divContent.appendChild(createHeader());
+  divContent.appendChild(createMain());
+
+  setActiveButton(document.querySelector(".button-nav"));
+}
+
+export { loadWebsite };
