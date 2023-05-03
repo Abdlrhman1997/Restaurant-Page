@@ -1,8 +1,10 @@
 :root {
+  --font-color: #eee;
   --font-color-dark: #aaa;
-  --background-dark: rgba(0, 0, 0, 0.9);
-  --background-light-hover: rgba(99, 99, 99, 0.4);
+  --border-color: #222;
   --background-light: rgba(0, 0, 0, 0.6);
+  --background-light-hover: rgba(99, 99, 99, 0.4);
+  --background-dark: rgba(0, 0, 0, 0.9);
 }
 
 *,
@@ -80,13 +82,13 @@ button:hover {
 }
 
 p {
-  color: aliceblue;
+  color: var(--font-color);
   font-size: 1.8em;
 }
 
 img {
-  width: 10em;
-  height: 10em;
+  width: 18em;
+  height: 18em;
 }
 
 #home {
@@ -94,4 +96,6 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  row-gap: 1em;
+  padding: 1em;
 }
