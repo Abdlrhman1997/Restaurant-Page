@@ -1,6 +1,8 @@
+import chefImage from "../dist/images/chef.png";
+
 function createHome() {
   const home = document.createElement("div");
-  home.id = "container";
+  home.id = "home";
 
   const p1 = document.createElement("p");
   p1.textContent = "Best pizza in your country";
@@ -9,7 +11,7 @@ function createHome() {
   p2.textContent = "Made with passion since 1908";
 
   const img = document.createElement("img");
-  img.src = "images/chef.png";
+  img.src = chefImage;
   img.alt = "chef";
 
   const p3 = document.createElement("p");
