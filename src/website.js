@@ -59,12 +59,14 @@ function createMain() {
 function createFooter() {
   const footer = document.createElement("footer");
   footer.textContent = "Cloned & Made by Abdlrhman Hegazy";
+  return footer;
 }
 
 function loadWebsite() {
   const divContent = document.getElementById("content");
   divContent.appendChild(createHeader());
   divContent.appendChild(createMain());
+  divContent.appendChild(createFooter());
   loadHome();
 }
 
