@@ -1,4 +1,4 @@
-import { loadHome } from "../home";
+import { loadHome } from "./home";
 
 function createHeader() {
   const header = document.createElement("header");
