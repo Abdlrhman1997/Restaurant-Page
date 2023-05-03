@@ -1,3 +1,5 @@
+import { loadHome } from "../home";
+
 function createHeader() {
   const header = document.createElement("header");
   header.id = "header";
@@ -11,26 +13,10 @@ function createHeader() {
   return header;
 }
 
-function setActiveButton(e) {
-  const navButtons = document.querySelectorAll(".button-nav");
-  navButtons.forEach((e) => {
-    e.classList.remove(".active");
-    e.classList.add(".active");
-  });
-}
-
-function checkActiveButton(e) {
-  if (e.classList.contain("active")) return;
-  setActiveButton(e);
-  switch (e.textContent) {
-    case "Home":
-      loadHome();
-
-    case "Menu":
-      loadMenu();
-
-    case "Contact":
-      loadContact();
+function removeActiveClass() {
+  const buttonsList = document.querySelectorAll(".button-nav");
+  for (let i = 0; i < buttonsList.length; i++) {
+    buttonsList[i].classList.remove("active");
   }
 }
 
@@ -39,24 +25,22 @@ function createNav() {
 
   const homeBttn = document.createElement("button");
   homeBttn.classList.add("button-nav");
+  homeBttn.classList.add("active");
   homeBttn.textContent = "Home";
   homeBttn.addEventListener("click", (e) => {
-    checkActiveButton(e.target);
+    removeActiveClass();
+    e.target.classList.add("active");
   });
 
   const menuBttn = document.createElement("button");
   menuBttn.classList.add("button-nav");
   menuBttn.textContent = "Menu";
-  menuBttn.addEventListener("click", (e) => {
-    checkActiveButton(e.target);
-  });
+  menuBttn.addEventListener("click", (e) => {});
 
   const contactBttn = document.createElement("button");
   contactBttn.classList.add("button-nav");
   contactBttn.textContent = "Contact";
-  contactBttn.addEventListener("click", (e) => {
-    checkActiveButton(e.target);
-  });
+  contactBttn.addEventListener("click", (e) => {});
 
   nav.appendChild(homeBttn);
   nav.appendChild(menuBttn);
@@ -76,8 +60,7 @@ function loadWebsite() {
   const divContent = document.getElementById("content");
   divContent.appendChild(createHeader());
   divContent.appendChild(createMain());
-
-  setActiveButton(document.querySelector(".button-nav"));
+  loadHome();
 }
 
 export { loadWebsite };

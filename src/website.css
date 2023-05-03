@@ -78,3 +78,13 @@ button:hover {
   top: 4em;
   border: 1px solid var(--background-light-hover);
 }
+
+p {
+  color: aliceblue;
+  font-size: 1.8em;
+}
+
+img {
+  width: 10em;
+  height: 10em;
+}

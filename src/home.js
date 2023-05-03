@@ -9,7 +9,8 @@ function createHome() {
   p2.textContent = "Made with passion since 1908";
 
   const img = document.createElement("img");
-  img.src = "";
+  img.src = "images/chef.png";
+  img.alt = "chef";
 
   const p3 = document.createElement("p");
   p3.textContent = "Order online or visit us!";
@@ -24,7 +25,6 @@ function createHome() {
 
 function loadHome() {
   const main = document.getElementById("main");
-  console.log(main);
   main.textContent = "";
   main.appendChild(createHome());
 }
