@@ -10,7 +10,7 @@ import CarnePhoto from "../dist/images/pizzas/carne.png";
 const pizzaContainer = document.createElement("div");
 pizzaContainer.setAttribute("id", "pizzaContainer");
 
-function loadMenu() {
+const CreateMenu = (() => {
   createItem(
     "Salsiccia",
     "Tomato sauce, Mozarella, Tomato, Homemade sausage, Garlic, Basil",
@@ -58,9 +58,10 @@ function loadMenu() {
     "Tomato sauce, Mozarella, Homemade sausage, Bacon, Garlic, Pepper, Chilli",
     CarnePhoto
   );
+})();
 
+function loadMenu() {
   const main = document.getElementById("main");
-
   main.appendChild(pizzaContainer);
 }
 

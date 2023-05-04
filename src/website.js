@@ -28,7 +28,7 @@ function createNav() {
   homeBttn.classList.add("button-nav");
   homeBttn.classList.add("active");
   homeBttn.textContent = "Home";
-  homeBttn.addEventListener("click", (e) => {
+  homeBttn.addEventListener("click", () => {
     emptyMain();
     loadHome();
   });
@@ -36,7 +36,7 @@ function createNav() {
   const menuBttn = document.createElement("button");
   menuBttn.classList.add("button-nav");
   menuBttn.textContent = "Menu";
-  menuBttn.addEventListener("click", (e) => {
+  menuBttn.addEventListener("click", () => {
     emptyMain();
     loadMenu();
   });
@@ -44,7 +44,7 @@ function createNav() {
   const contactBttn = document.createElement("button");
   contactBttn.classList.add("button-nav");
   contactBttn.textContent = "Contact";
-  contactBttn.addEventListener("click", (e) => {
+  contactBttn.addEventListener("click", () => {
     emptyMain();
     loadContact();
   });
