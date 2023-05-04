@@ -89,6 +89,7 @@ button:hover {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 3em;
+  animation: fadeIn 1.5s;
 }
 
 footer {
@@ -120,6 +121,7 @@ img {
   align-items: center;
   row-gap: 1em;
   padding: 1em;
+  animation: fadeIn 1.5s;
 }
 
 .photoP {
@@ -157,6 +159,7 @@ img {
   padding: 2.5em;
   font-size: 1em;
   line-height: 3.5em;
+  animation: fadeIn 1.5s;
 }
 
 #contactContainer img {
@@ -166,4 +169,14 @@ img {
 
 .active {
   border-bottom: 2px solid var(--font-color);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
