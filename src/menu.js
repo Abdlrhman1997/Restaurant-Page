@@ -31,7 +31,6 @@ function loadMenu() {
 
 function createItem(title, description, photo) {
   const pizzaDiv = document.createElement("div");
-  pizzaDiv.setAttribute("id", "pizzaDiv");
   pizzaDiv.classList.add("menu-item");
 
   const titleP = document.createElement("p");
