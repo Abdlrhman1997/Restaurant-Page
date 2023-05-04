@@ -4,6 +4,10 @@ import PepePhoto from "../dist/images/pizzas/pepe.png";
 import DisgustosoPhoto from "../dist/images/pizzas//disgustoso.png";
 
 function loadMenu() {
+  const main = document.getElementById("main");
+  console.log(main);
+  main.textContent = "";
+
   createItem(
     "Salsiccia",
     "Tomato sauce, Mozarella, Tomato, Homemade sausage, Garlic, Basil",
@@ -22,15 +26,17 @@ function loadMenu() {
     PepePhoto
   );
 
-  createItem(
-    "Disgustoso",
-    "Tomato sauce, Bacon, Pineapple, Olives, Basil",
-    DisgustosoPhoto
+  main.appendChild(
+    createItem(
+      "Disgustoso",
+      "Tomato sauce, Bacon, Pineapple, Olives, Basil",
+      DisgustosoPhoto
+    )
   );
 }
 
 function createItem(title, description, photo) {
-  const pizza = document.createElement("div");
+  const pizzaDiv = document.createElement("div");
   pizza.classList.add("menu-item");
 
   const titleP = document.createElement("p");
@@ -48,4 +54,8 @@ function createItem(title, description, photo) {
   pizza.appendChild(photoP);
   pizza.appendChild(titleP);
   pizza.appendChild(descriptionP);
+
+  return pizzaDiv;
 }
+
+export { loadMenu };
