@@ -71,7 +71,7 @@ button {
 }
 
 button:hover {
-  transform: translateY(-15%);
+  transform: translateY(-21%);
 }
 
 #main {
