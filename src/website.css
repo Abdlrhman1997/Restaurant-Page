@@ -73,12 +73,19 @@ button:hover {
 
 #main {
   width: 700px;
-  height: 500px;
+  height: fit-content;
   background-color: var(--background-light);
   position: relative;
   left: 20em;
   top: 4em;
   border: 1px solid var(--background-light-hover);
+}
+
+#pizzaContainer {
+  padding: 2em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3em;
 }
 
 footer {
@@ -126,10 +133,11 @@ img {
 }
 
 .menu-item {
+  padding: 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: var(--background-light);
-  width: 12em;
-  height: 13em;
+  width: 250px;
+  height: 250px;
 }
