@@ -3,7 +3,7 @@ import GamberiPhoto from "../dist/images/pizzas/gamberi.png";
 import PepePhoto from "../dist/images/pizzas/pepe.png";
 import DisgustosoPhoto from "../dist/images/pizzas//disgustoso.png";
 
-function createMenu() {
+function loadMenu() {
   createItem(
     "Salsiccia",
     "Tomato sauce, Mozarella, Tomato, Homemade sausage, Garlic, Basil",
