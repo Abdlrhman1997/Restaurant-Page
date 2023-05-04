@@ -50,6 +50,7 @@ function createItem(title, description, photo) {
   pizzaDiv.appendChild(descriptionP);
 
   const main = document.getElementById("main");
+  main.id = "mainInMenu";
   main.appendChild(pizzaDiv);
 }
 
