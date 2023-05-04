@@ -28,24 +28,30 @@ function createNav() {
   homeBttn.classList.add("button-nav");
   homeBttn.classList.add("active");
   homeBttn.textContent = "Home";
-  homeBttn.addEventListener("click", () => {
+  homeBttn.addEventListener("click", (e) => {
+    removeActiveClass();
     emptyMain();
+    e.target.classList.add("active");
     loadHome();
   });
 
   const menuBttn = document.createElement("button");
   menuBttn.classList.add("button-nav");
   menuBttn.textContent = "Menu";
-  menuBttn.addEventListener("click", () => {
+  menuBttn.addEventListener("click", (e) => {
+    removeActiveClass();
     emptyMain();
+    e.target.classList.add("active");
     loadMenu();
   });
 
   const contactBttn = document.createElement("button");
   contactBttn.classList.add("button-nav");
   contactBttn.textContent = "Contact";
-  contactBttn.addEventListener("click", () => {
+  contactBttn.addEventListener("click", (e) => {
+    removeActiveClass();
     emptyMain();
+    e.target.classList.add("active");
     loadContact();
   });
 
