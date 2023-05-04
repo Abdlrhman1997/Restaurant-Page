@@ -149,3 +149,14 @@ img {
 .menu-item:hover {
   background-color: var(--background-light-hover);
 }
+
+#contactContainer {
+  padding: 2.5em;
+  font-size: 1em;
+  line-height: 3.5em;
+}
+
+#contactContainer img {
+  width: 100%;
+  height: 100%;
+}
