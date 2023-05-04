@@ -1,5 +1,5 @@
 import { loadHome } from "./home";
-
+import { loadMenu } from "./menu";
 function createHeader() {
   const header = document.createElement("header");
   header.id = "header";
@@ -28,14 +28,17 @@ function createNav() {
   homeBttn.classList.add("active");
   homeBttn.textContent = "Home";
   homeBttn.addEventListener("click", (e) => {
-    removeActiveClass();
-    e.target.classList.add("active");
+    emptyMain();
+    loadHome();
   });
 
   const menuBttn = document.createElement("button");
   menuBttn.classList.add("button-nav");
   menuBttn.textContent = "Menu";
-  menuBttn.addEventListener("click", (e) => {});
+  menuBttn.addEventListener("click", (e) => {
+    emptyMain();
+    loadMenu();
+  });
 
   const contactBttn = document.createElement("button");
   contactBttn.classList.add("button-nav");
@@ -54,6 +57,11 @@ function createMain() {
   main.classList.add("main");
   main.setAttribute("id", "main");
   return main;
+}
+
+function emptyMain() {
+  const main = document.getElementById("main");
+  main.textContent = "";
 }
 
 function createFooter() {

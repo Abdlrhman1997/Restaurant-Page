@@ -1,5 +1,4 @@
 import chefImage from "../dist/images/chef.png";
-
 function createHome() {
   const home = document.createElement("div");
   home.id = "home";
