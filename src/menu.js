@@ -1,7 +1,11 @@
 import SalsicciaPhoto from "../dist/images/pizzas/salsiccia.png";
 import GamberiPhoto from "../dist/images/pizzas/gamberi.png";
 import PepePhoto from "../dist/images/pizzas/pepe.png";
-import DisgustosoPhoto from "../dist/images/pizzas//disgustoso.png";
+import DisgustosoPhoto from "../dist/images/pizzas/disgustoso.png";
+import ColoratoPhoto from "../dist/images/pizzas/colorato.png";
+import PomodoroPhoto from "../dist/images/pizzas/pomodoro.png";
+import CremaPhoto from "../dist/images/pizzas/crema.png";
+import CarnePhoto from "../dist/images/pizzas/carne.png";
 
 const pizzaContainer = document.createElement("div");
 pizzaContainer.setAttribute("id", "pizzaContainer");
@@ -29,6 +33,30 @@ function loadMenu() {
     "Disgustoso",
     "Tomato sauce, Bacon, Pineapple, Olives, Basil",
     DisgustosoPhoto
+  );
+
+  createItem(
+    "Colorato",
+    "Tomato sauce, Mozarella, Onion, Pepper, Champignons, Basil",
+    ColoratoPhoto
+  );
+
+  createItem(
+    "Pomodoro",
+    "Tomato sauce, Mozarella, Tomato, Onion, Feta cheese, Chilli",
+    PomodoroPhoto
+  );
+
+  createItem(
+    "Crema",
+    "White sauce, Mozarella, Shrimps, Salmon, Pineapple, Olives, Basil",
+    CremaPhoto
+  );
+
+  createItem(
+    "Carne",
+    "Tomato sauce, Mozarella, Homemade sausage, Bacon, Garlic, Pepper, Chilli",
+    CarnePhoto
   );
 
   const main = document.getElementById("main");
