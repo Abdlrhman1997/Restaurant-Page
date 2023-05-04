@@ -143,6 +143,7 @@ img {
   height: 17em;
   line-height: 1.5em;
   text-align: center;
+  cursor: pointer;
 }
 
 .menu-item:hover {
