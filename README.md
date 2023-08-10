@@ -9,6 +9,6 @@ I adopted the ES6 Module pattern.
 </br>
 Wrote a clean code as much as i can. 
 </br>
-<a href='https://abdlrhman1997.github.io/Restaurant-Page/' target="_blank">Live Demo 👈</a>
+
 
   
